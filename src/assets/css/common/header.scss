@@ -1,0 +1,45 @@
+.sys-header {
+    // position: relative;
+    width: 100%;
+    height: $headerHeight;
+    background-color: $headerBgColor;
+    // display: flex;
+    z-index: 500;
+    .logo {
+        float: left;
+        height: $headerHeight;
+        line-height: $headerHeight;
+        padding-left: 20px;
+        color: $headerColor;
+        font-size: $headerFontSize;
+        background: $neutralGray;
+    }
+    .userInfo {
+        float: right;
+        height: $headerHeight;
+        &>ul {
+            height: $headerHeight;
+            &>li {
+                display: inline-block;
+                height: $headerHeight;
+                line-height: $headerHeight;
+                margin-right: 20px;
+                color: $headerColor;
+                .lang {
+                    color: darken($headerColor, 20%);
+                    cursor: pointer;
+                    &.cur {
+                        color: $headerColor;
+                    }
+                }
+                .user {
+                    color: $headerColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .editPawDialog{
+        width: 400px;
+    }
+}
